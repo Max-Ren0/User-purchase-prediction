@@ -12,7 +12,6 @@ venv.bak/
 
 # Jupyter
 .ipynb_checkpoints/
-*.ipynb
 
 # 数据文件
 *.csv
@@ -21,6 +20,7 @@ venv.bak/
 *.h5
 *.hdf5
 x/
+data/
 
 # 提交文件
 submit_*.csv
@@ -55,3 +55,51 @@ Thumbs.db
 .Trashes
 ehthumbs.db
 Thumbs.db
+
+# =============================================================================
+# 🚫 不推送到GitHub的文件 - 只保留在本地
+# =============================================================================
+
+# 文档和配置文件
+bayesian_optimization_implementation.py
+competition_config.py
+competition_guide.md
+competition_workflow.py
+create_notion_report.py
+debug_fix.py
+deep_optimization_report.md
+final_optimization_complete.md
+git_version_strategy.md
+github_professional_setup.md
+industrial_hyperparameter_tuning.md
+notebooks_optimization_summary.md
+notion_optimization_report.md
+parameter_tuning_guide.md
+parameter_tuning_practical.py
+performance_test.py
+performance_test_report.json
+project_completion_report.md
+quick_setup_commands.sh
+quick_test.py
+quick_tuning_guide.md
+resume_project_content.md
+simple_notion_create.py
+smart_fast_mode.py
+reco_pipeline_utils.py
+cleanup_repository.py
+
+# Pages文件
+*.pages
+1.pages
+outline.pages
+代码优化过程.pages
+多路召回.pages
+
+# 备份文件
+*_backup.ipynb
+*_copy.ipynb
+Untitled.ipynb
+
+# 临时目录
+notebooks_副本/
+docs/
