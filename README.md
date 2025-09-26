@@ -32,6 +32,12 @@
 # 安装依赖
 pip install -r requirements.txt
 
+# 下载数据文件（从比赛官网）
+# 将以下文件放置在 data/ 目录下：
+# - Antai_hackathon_train.csv (训练数据)
+# - Antai_hackathon_attr.csv (商品属性)
+# - dianshang_test.csv (测试数据)
+
 # 启动Jupyter
 jupyter notebook
 ```

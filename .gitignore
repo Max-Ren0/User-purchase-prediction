@@ -76,8 +76,12 @@ x/
 *.parquet
 *.pkl
 *.csv
-!data/*.csv
 !requirements.txt
+
+# 大型数据文件（超过100MB）
+data/Antai_hackathon_train.csv
+data/Antai_hackathon_attr.csv
+data/dianshang_test.csv
 
 # 临时文件
 *.tmp
