@@ -1,0 +1,83 @@
+{
+  "project_name": "用户购买预测推荐系统",
+  "version": "1.0.0",
+  "description": "基于多路召回的推荐系统，使用贝叶斯优化调参",
+  "data_files": {
+    "train": "data/Antai_hackathon_train.csv",
+    "attr": "data/Antai_hackathon_attr.csv", 
+    "test": "data/dianshang_test.csv"
+  },
+  "processed_files": {
+    "train_sorted": "data/train_sorted.parquet",
+    "train_vis": "data/train_vis.parquet",
+    "item_attr": "data/item_attr.parquet",
+    "test_sorted": "data/test_sorted.parquet",
+    "label_df": "data/label_df.parquet"
+  },
+  "notebooks": {
+    "0_prep": "notebooks/0_prep.ipynb",
+    "1_recall": "notebooks/1_recall.ipynb",
+    "2_rank": "notebooks/2_rank.ipynb", 
+    "3_eval": "notebooks/3_eval.ipynb",
+    "4_online": "notebooks/4_online.ipynb"
+  },
+  "scripts": {
+    "bayesian_optimization": "bayesian_optimization_enhanced.py",
+    "recall_eval": "recall_eval_functions.py"
+  },
+  "modes": {
+    "development": {
+      "FAST_MODE": true,
+      "N_SMOKE": 5000,
+      "description": "开发调试模式 - 快速验证"
+    },
+    "production": {
+      "FAST_MODE": false,
+      "N_SMOKE": null,
+      "description": "生产模式 - 完整数据运行"
+    }
+  },
+  "params": {
+    "development": {
+      "covisit_window": 4,
+      "covisit_top_per_a": 317,
+      "recent_k": 4,
+      "cand_per_recent": 69,
+      "tau_days": 11,
+      "per_cate_pool": 38,
+      "per_store_pool": 96,
+      "pop_pool": 4863,
+      "recall_cap": 866,
+      "batch_size": 4000
+    },
+    "production": {
+      "covisit_window": 4,
+      "covisit_top_per_a": 317,
+      "recent_k": 4,
+      "cand_per_recent": 69,
+      "tau_days": 11,
+      "per_cate_pool": 38,
+      "per_store_pool": 96,
+      "pop_pool": 4863,
+      "recall_cap": 866,
+      "batch_size": 4000
+    }
+  },
+  "current_mode": "production",
+  "last_updated": "2025-09-13T21:30:00.000000",
+  "optimization_source": "贝叶斯优化 - 综合评分: 0.8324",
+  "performance_targets": {
+    "hr50": "> 0.15",
+    "mrr50": "> 0.08", 
+    "ndcg50": "> 0.12",
+    "total_score": "> 0.12"
+  },
+  "dependencies": [
+    "pandas",
+    "numpy", 
+    "scikit-learn",
+    "scikit-optimize",
+    "lightgbm",
+    "tqdm"
+  ]
+}

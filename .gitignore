@@ -1,43 +1,91 @@
 # Python
-*.pyc
 __pycache__/
-*.pyo
-*.pyd
+*.py[cod]
+*$py.class
+*.so
 .Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IPython
+profile_default/
+ipython_config.py
+
+# pyenv
+.python-version
+
+# pipenv
+Pipfile.lock
+
+# PEP 582
+__pypackages__/
+
+# Celery
+celerybeat-schedule
+celerybeat.pid
+
+# SageMath parsed files
+*.sage.py
+
+# Environments
+.env
+.venv
 env/
 venv/
 ENV/
 env.bak/
 venv.bak/
 
-# Jupyter
-.ipynb_checkpoints/
+# Spyder project settings
+.spyderproject
+.spyproject
 
-# 数据文件
-*.csv
+# Rope project settings
+.ropeproject
+
+# mkdocs documentation
+/site
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+# 数据处理文件
+x/
 *.parquet
 *.pkl
-*.h5
-*.hdf5
-x/
-data/
-
-# 提交文件
-submit_*.csv
-submit_*.json
-
-# 环境变量
-.env
-.env.local
-.env.production
-
-# 日志文件
-*.log
-logs/
+*.csv
+!data/*.csv
+!requirements.txt
 
 # 临时文件
 *.tmp
 *.temp
+*.log
+*.out
+
+# 系统文件
 .DS_Store
 Thumbs.db
 
@@ -47,59 +95,13 @@ Thumbs.db
 *.swp
 *.swo
 
-# 系统文件
-.DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
-Thumbs.db
-
-# =============================================================================
-# 🚫 不推送到GitHub的文件 - 只保留在本地
-# =============================================================================
-
-# 文档和配置文件
-bayesian_optimization_implementation.py
-competition_config.py
-competition_guide.md
-competition_workflow.py
-create_notion_report.py
-debug_fix.py
-deep_optimization_report.md
-final_optimization_complete.md
-git_version_strategy.md
-github_professional_setup.md
-industrial_hyperparameter_tuning.md
-notebooks_optimization_summary.md
-notion_optimization_report.md
-parameter_tuning_guide.md
-parameter_tuning_practical.py
-performance_test.py
-performance_test_report.json
-project_completion_report.md
-quick_setup_commands.sh
-quick_test.py
-quick_tuning_guide.md
-resume_project_content.md
-simple_notion_create.py
-smart_fast_mode.py
-reco_pipeline_utils.py
-cleanup_repository.py
-
-# Pages文件
-*.pages
-1.pages
-outline.pages
-代码优化过程.pages
-多路召回.pages
-
 # 备份文件
-*_backup.ipynb
-*_copy.ipynb
-Untitled.ipynb
+备份/
+backup/
+*.bak
 
-# 临时目录
-notebooks_副本/
-docs/
+# 结果文件
+submit_*.csv
+metrics_*.csv
+evaluation_report.md
+feature_importance.csv
